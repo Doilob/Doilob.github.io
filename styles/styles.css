@@ -1,0 +1,14 @@
+/* Web Font Load */
+@font-face{
+    font-family:'DNFBitBit';
+    font-style: 'normal';
+    src: url('assets\DNFBitBitTTF_Font.woff') format('woff');
+}
+
+/* logo */
+h1 {
+    font-family: 'DNFBitBit';
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+}
