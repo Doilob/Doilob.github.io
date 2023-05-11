@@ -1,65 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>GitHub File Upload</title>
-</head>
-<body>
-	<input type="file" id="file-input">
-	<button onclick="uploadFile()">Upload</button>
-
-	<script>
-		// API 엔드포인트
-		const API_ENDPOINT = "https://api.github.com/repos/:owner/:repo/contents/:path";
-
-		// 업로드할 파일 정보
-		var fileInput = document.getElementById("file-input");
-		var file = fileInput.files[0];
-
-		// API 호출을 위한 인증 토큰
-		var TOKEN = "";
-
-		function getToken() {
-			TOKEN = prompt("Please enter your GitHub Personal Access Token:");
-			if (TOKEN) {
-				uploadFile();
-			} else {
-				alert("Token is required to upload a file to GitHub.");
-			}
-		}
-
-		function uploadFile() {
-			// 파일을 읽어서 base64 인코딩
-			var reader = new FileReader();
-			reader.readAsDataURL(file);
-			reader.onload = function () {
-				var dataUrl = reader.result.split(',')[1];
-				var payload = {
-					"message": "Add a new file",
-					"content": dataUrl
-				};
-
-				// API 호출
-				fetch(API_ENDPOINT.replace(":owner", "OWNER_NAME").replace(":repo", "REPO_NAME").replace(":path", file.name), {
-					method: "PUT",
-					headers: {
-						"Content-Type": "application/json",
-						"Authorization": "Bearer " + TOKEN
-					},
-					body: JSON.stringify(payload)
-				})
-				.then(response => {
-					if (response.ok) {
-						alert("File uploaded successfully.");
-					} else {
-						alert("Upload failed.");
-					}
-				})
-				.catch(error => console.error("Error:", error));
-			};
-			reader.onerror = function (error) {
-				console.error("Error:", error);
-			};
-		}
-	</script>
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" href="styles/styles.css"> 
+  <link rel="icon" href="image/My_Hompage_icon.ico" type="image/x-icon" sizes="16x16"> 
+  <title>My Archive</title> 
+</head> 
+<body> 
+  <!-- 컨테이너 시작 -->
+  <div class="container"> 
+    <div class="left-half"> 
+      <p>Main Archive</p> 
+    </div> 
+    <div class="right-half"> 
+        <input id="check-btn" type="checkbox" />
+        <label for="check-btn" class="menu-label">Click Me!</label>
+            <ul class="menu-list">
+                <li class="menu-item">메뉴</li>
+                <li class="menu-item">메뉴</li>
+                <li class="menu-item">메뉴</li>
+                <li class="menu-item">메뉴</li>
+            </ul>
+    </div> 
+  </div> <!-- 컨테이너 끝 -->
+  <!-- 페이지 제목 --> 
+  <h1>This is my page</h1> 
+  <!-- 버튼과 링크 --> 
+  <a href="https://github.com/Doilob">   
+    <img id="icon" src="image\github-mark\github-mark\github-mark.png" alt="My github" title="My github"> 
+  </a> 
 </body>
-</html>
+<footer>
+    <div class="container">
+      <div class="left-halfbt">
+        <p>Copyright © 2023</p>
+      </div>
+      <div class="right-halfbt">
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</html> 
