@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GitHub File Upload</title>
+</head>
+<body>
+	<input type="file" id="file-input">
+	<button onclick="uploadFile()">Upload</button>
+
+	<script>
+		// API 엔드포인트
+		const API_ENDPOINT = "https://api.github.com/repos/:owner/:repo/contents/:path";
+
+		// 업로드할 파일 정보
+		var fileInput = document.getElementById("file-input");
+		var file = fileInput.files[0];
+
+		// API 호출을 위한 인증 토큰
+		var TOKEN = "";
+
+		function getToken() {
+			TOKEN = prompt("Please enter your GitHub Personal Access Token:");
+			if (TOKEN) {
+				uploadFile();
+			} else {
+				alert("Token is required to upload a file to GitHub.");
+			}
+		}
+
+		function uploadFile() {
+			// 파일을 읽어서 base64 인코딩
+			var reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = function () {
+				var dataUrl = reader.result.split(',')[1];
+				var payload = {
+					"message": "Add a new file",
+					"content": dataUrl
+				};
+
+				// API 호출
+				fetch(API_ENDPOINT.replace(":owner", "OWNER_NAME").replace(":repo", "REPO_NAME").replace(":path", file.name), {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+						"Authorization": "Bearer " + TOKEN
+					},
+					body: JSON.stringify(payload)
+				})
+				.then(response => {
+					if (response.ok) {
+						alert("File uploaded successfully.");
+					} else {
+						alert("Upload failed.");
+					}
+				})
+				.catch(error => console.error("Error:", error));
+			};
+			reader.onerror = function (error) {
+				console.error("Error:", error);
+			};
+		}
+	</script>
+</body>
+</html>
