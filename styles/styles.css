@@ -1,14 +1,29 @@
 /* Web Font Load */
 @font-face{
-    font-family:'DNFBitBit';
-    font-style: 'normal';
-    src: url('assets\DNFBitBitTTF_Font.woff') format('woff');
+    font-family: "DNFBitfont";
+    src: url("../assets/DNFBitBitTTF_Font.ttf")
+}
+/* logo */
+#MainSub {
+    font-family: "DNFBitfont";
+    font-size: 70px;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 50%;
+    border: 5px solid #dddddd;
+    padding: 50px;
+}
+/* id Tags */
+
+
+.box1 {
+    margin: 30px;
+    border: 30px solid #dddddd;
+    padding: 30px;
 }
 
-/* logo */
-h1 {
-    font-family: 'DNFBitBit';
-    font-size: 100px;
-    text-align: center;
-    margin: 0px;
+.logoSize {
+    width: "150";
+    height: "150";
 }
