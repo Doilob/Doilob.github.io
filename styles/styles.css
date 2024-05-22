@@ -15,7 +15,7 @@
 }
 #icon {
   display: inline-block;
-  margin-inline: 5% 10%;
+  margin-inline: 5% 5%;
   writing-mode: horizontal-tb;
   width: 80px;
   height: 80px;
@@ -39,11 +39,11 @@ body {
 
 .top {
   font-family: "NotoSans_extrabold";
-  font-size: 150px;
+  font-size: 130px;
   color: var(--top-text-color);
   text-align: center;
   padding-top: 10%;
-  padding-bottom: 15%;
+  padding-bottom: 7%;
   border: 0px;
   background-color: var(--main-top-bg-color);
 }
@@ -56,6 +56,8 @@ body {
 }
 .li_icon{
   flex: 1 1 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
   text-align: center;
   
 }
