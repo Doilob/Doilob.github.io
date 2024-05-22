@@ -2,13 +2,14 @@
 @font-face {
   font-family: "DNFfont";
   src: url("../assets/DNFBitBitTTF_Font.ttf");
+
   font-family: "NotoSans_medium";
   src: url("../assets/static/NotoSansKR-Medium.ttf");
   }
   
   /* colors */
   :root {
-  --main-bg-color: #F5DEB3;
+  --main-bg-color: #8d7750;
   --side-bg-color: #F5F5F5;
   --text-color: #483C32;
   --button-bg-color: #4CAF50;
@@ -65,18 +66,15 @@ button {
   display: flex;
 }
   
-.left-half {
+.top {
   font-family: "NotoSans_medium";
-  font-size: 80px;
+  font-size: 150px;
   color: var(--text-color);
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
-  width: 50%;
-  border-right: 3px solid #ccc;
+  width: 100%;
   background-color: var(--main-bg-color);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
   
 .right-half {
