@@ -19,7 +19,16 @@
   writing-mode: horizontal-tb;
   width: 80px;
   height: 80px;
+  opacity: 0.6;
+  transition: all 0.25s;
 }
+
+#icon:hover {
+  transition: all 0.25s;
+  transform: scale(1.2,1.2);
+  opacity: 1;
+}
+
 /* colors */
 :root {
   --main-top-bg-color: #5c5c5c;
@@ -59,7 +68,7 @@ body {
   padding-top: 2%;
   padding-bottom: 2%;
   text-align: center;
-  
+  opacity: 0.6;
 }
 
 .bottom {
