@@ -2,6 +2,8 @@
 @font-face {
   font-family: "DNFfont";
   src: url("../assets/DNFBitBitTTF_Font.ttf");
+  font-family: "NotoSans_medium";
+  src: url("../assets/static/NotoSansKR-Medium.ttf");
   }
   
   /* colors */
@@ -64,7 +66,7 @@ button {
 }
   
 .left-half {
-  font-family: "DNFfont";
+  font-family: "NotoSans_medium";
   font-size: 80px;
   color: var(--text-color);
   text-align: center;
