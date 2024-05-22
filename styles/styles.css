@@ -89,7 +89,7 @@ body {
 }
 
 footer {
-  background-color: #F2F2F2;
+  background-color: var(--main-footer-bg-color);
   padding: 50px 0;
 }
 
