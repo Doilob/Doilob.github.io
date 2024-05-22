@@ -8,9 +8,6 @@
   user-select: none !important;
 }
 @font-face {
-  font-family: "DNFfont";
-  src: url("../assets/DNFBitBitTTF_Font.ttf");
-
   font-family: "NotoSans_medium";
   src: url("../assets/static/NotoSansKR-Medium.ttf");
 
@@ -38,7 +35,7 @@
 
 #icon-text{
   font-family: "NotoSans_medium";
-  font-size: 30pt;
+  font-size: 20pt;
 }
 
 /* colors */
