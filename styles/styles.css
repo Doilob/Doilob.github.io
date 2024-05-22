@@ -11,6 +11,10 @@
   font-family: "NotoSans_thin";
   src: url("../assets/static/NotoSansKR-Thin.ttf");
 }
+@font-face {
+  font-family: "NotoSans_regular";
+  src: url("../assets/static/NotoSansKR-Regular.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +41,7 @@
 }
 
 #icon-text{
-  font-family: "NotoSans_medium";
+  font-family: "NotoSans_regularw";
   font-size: 25px;
 }
 
