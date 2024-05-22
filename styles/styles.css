@@ -1,4 +1,16 @@
 /* font-face */
+@font-face {
+  font-family: "NotoSans_medium";
+  src: url("../assets/static/NotoSansKR-Medium.ttf");
+}
+@font-face {
+  font-family: "NotoSans_extrabold";
+  src: url("../assets/static/NotoSansKR-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "NotoSans_thin";
+  src: url("../assets/static/NotoSansKR-Thin.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +19,7 @@
   -ms-user-select: none !important;
   user-select: none !important;
 }
-@font-face {
-  font-family: "NotoSans_medium";
-  src: url("../assets/static/NotoSansKR-Medium.ttf");
 
-  font-family: "NotoSans_extrabold";
-  src: url("../assets/static/NotoSansKR-ExtraBold.ttf");
-
-  font-family: "NotoSans_thin";
-  src: url("../assets/static/NotoSansKR-Thin.ttf");
-}
 #icon {
   display: inline-block;
   margin-inline: 5% 5%;
@@ -35,7 +38,7 @@
 
 #icon-text{
   font-family: "NotoSans_medium";
-  font-size: 20pt;
+  font-size: 25px;
 }
 
 /* colors */
@@ -57,7 +60,7 @@ body {
 
 .top {
   font-family: "NotoSans_extrabold";
-  font-size: 100pt;
+  font-size: 150px;
   color: var(--top-text-color);
   text-align: center;
   padding-top: 10%;
