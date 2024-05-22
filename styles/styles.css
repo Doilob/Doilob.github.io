@@ -5,13 +5,16 @@
 
   font-family: "NotoSans_medium";
   src: url("../assets/static/NotoSansKR-Medium.ttf");
+
+  font-family: "NotoSans_extrabold";
+  src: url("../assets/static/NotoSansKR-ExtraBold.ttf");
   }
   
   /* colors */
   :root {
-  --main-bg-color: #8d7750;
+  --main-bg-color: #5c5c5c;
   --side-bg-color: #F5F5F5;
-  --text-color: #483C32;
+  --text-color: #ffffff;
   --button-bg-color: #4CAF50;
   --button-hover-bg-color: #3e8e41;
   --button-active-bg-color: #367d39;
@@ -67,7 +70,7 @@ button {
 }
   
 .top {
-  font-family: "NotoSans_medium";
+  font-family: "NotoSans_extrabold";
   font-size: 150px;
   color: var(--text-color);
   text-align: center;
@@ -77,7 +80,7 @@ button {
   background-color: var(--main-bg-color);
 }
   
-.right-half {
+.bottom {
   width: 20%;
   background-color: var(--side-bg-color);
   border-top-right-radius: 20px;
