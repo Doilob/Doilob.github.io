@@ -16,6 +16,9 @@
 
   font-family: "NotoSans_extrabold";
   src: url("../assets/static/NotoSansKR-ExtraBold.ttf");
+
+  font-family: "NotoSans_thin";
+  src: url("../assets/static/NotoSansKR-Thin.ttf");
 }
 #icon {
   display: inline-block;
@@ -31,6 +34,11 @@
   transition: all 0.25s;
   transform: scale(1.2,1.2);
   opacity: 1;
+}
+
+#icon-text{
+  font-family: "NotoSans_medium";
+  font-size: 20pt;
 }
 
 /* colors */
@@ -52,7 +60,7 @@ body {
 
 .top {
   font-family: "NotoSans_extrabold";
-  font-size: 130px;
+  font-size: 100pt;
   color: var(--top-text-color);
   text-align: center;
   padding-top: 10%;
