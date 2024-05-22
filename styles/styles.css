@@ -12,9 +12,11 @@
   
   /* colors */
   :root {
-  --main-bg-color: #5c5c5c;
+  --main-top-bg-color: #5c5c5c;
+  --main-bottom-bg-color: #ababab;
   --side-bg-color: #F5F5F5;
-  --text-color: #ffffff;
+  --top-text-color: #ffffff;
+  --bottom-text-color: #000000;
   --button-bg-color: #4CAF50;
   --button-hover-bg-color: #3e8e41;
   --button-active-bg-color: #367d39;
@@ -72,25 +74,25 @@ button {
 .top {
   font-family: "NotoSans_extrabold";
   font-size: 150px;
-  color: var(--text-color);
+  color: var(--top-text-color);
   text-align: center;
   padding-top: 0px;
   margin: 0px;
   padding-bottom: 0px;
   width: 100%;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-top-bg-color);
 }
   
 .bottom {
-  width: 20%;
-  background-color: var(--side-bg-color);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  color: var(--text-color);
-  text-align: left;
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: bold;
+  font-family: "NotoSans_extrabold";
+  font-size: 150px;
+  color: var(--bottom-text-color);
+  text-align: center;
+  padding-top: 0px;
+  margin: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+  background-color: var(--main-bottom-bg-color);
 }
 
 label[for="check-btn"] {
