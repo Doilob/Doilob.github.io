@@ -78,6 +78,7 @@ button {
   text-align: center;
   padding-top: 0px;
   margin: 0px;
+  border: 0px;
   padding-bottom: 0px;
   width: 100%;
   background-color: var(--main-top-bg-color);
